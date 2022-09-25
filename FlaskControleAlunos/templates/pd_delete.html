@@ -11,11 +11,9 @@
     />
   </head>
   <body>
-    <h1 style="text-align: center">
-      Quer mesmo apagar este componente curricular?
-    </h1>
-    <form method="POST" action="/uc/dlt">
-      <input type="hidden" id="id" name="id" value="{{uc.id}}" />
+    <h1 style="text-align: center">Quer mesmo apagar este produto?</h1>
+    <form method="POST" action="/pd/dlt">
+      <input type="hidden" id="id" name="id" value="{{pd.id}}" />
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
@@ -23,19 +21,15 @@
               <tbody>
                 <tr>
                   <td>Nome:</td>
-                  <td>{{uc.nome}}</td>
+                  <td>{{pd.nome}}</td>
                 </tr>
                 <tr>
-                  <td>Tipo:</td>
-                  <td>{{uc.tipo}}</td>
+                  <td>Preco:</td>
+                  <td>{{pd.preco}}</td>
                 </tr>
                 <tr>
-                  <td>Data Início:</td>
-                  <td>{{uc.inicio}}</td>
-                </tr>
-                <tr>
-                  <td>Data Fim:</td>
-                  <td>{{uc.fim}}</td>
+                  <td>Quantidade:</td>
+                  <td>{{pd.quantidade}}</td>
                 </tr>
                 <tr>
                   <td colspan="2"><input type="submit" value="Apagar" /></td>

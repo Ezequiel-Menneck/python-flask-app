@@ -1,6 +1,6 @@
 from flask import Flask 
 from .extensions import db, migrate
-from .routes.ucBp import ucBp
+from .routes.pdBp import pdBp
 
 def create_app():
     app = Flask(__name__)
@@ -10,6 +10,6 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app)
     
-    app.register_blueprint(ucBp)
+    app.register_blueprint(pdBp)
 
     return app

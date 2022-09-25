@@ -12,8 +12,8 @@
   </head>
   <body>
     <h1 style="text-align: center">Crud UC</h1>
-    <form method="POST" action="/uc/upd">
-      <input type="hidden" id="id" name="id" value="{{uc.id}}" />
+    <form method="POST" action="/pd/upd">
+      <input type="hidden" id="id" name="id" value="{{pd.id}}" />
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
@@ -26,47 +26,32 @@
                       type="text"
                       name="nome"
                       id="nome"
-                      value="{{uc.nome}}"
+                      value="{{pd.nome}}"
                       required
                     />
                   </td>
                 </tr>
                 <tr>
-                  <td>Tipo:</td>
-                  <td>
-                    <input type="radio" name="tipo" id="tipo" value="Curso de
-                    Extensão" {{ "checked" if uc.tipo=="Curso de Extensão" else
-                    "" }} required> Curso de Extensão <input type="radio"
-                    name="tipo" id="tipo" value="Unidade Curricular" required {{
-                    "checked" if uc.tipo=="Unidade Curricular" else "" }}>
-                    Unidade Curricular
-                  </td>
-                </tr>
-                <tr>
-                  <td>Data Início:</td>
+                  <td>Preco:</td>
                   <td>
                     <input
-                      type="date"
-                      name="inicio"
-                      id="inicio"
+                      type="text"
+                      name="preco"
+                      id="preco"
                       required
-                      format="dd/mm/yyyy"
-                      placeholder="DD-MM-YYYY"
-                      value="{{uc.inicio}}"
+                      value="{{pd.preco}}"
                     />
                   </td>
                 </tr>
                 <tr>
-                  <td>Data Fim:</td>
+                  <td>Quantidade</td>
                   <td>
                     <input
-                      type="date"
-                      name="fim"
-                      id="fim"
+                      type="text"
+                      name="qtd"
+                      id="qtd"
                       required
-                      format="dd/mm/yyyy"
-                      placeholder="DD-MM-YYYY"
-                      value="{{uc.fim}}"
+                      value="{{pd.quantidade}}"
                     />
                   </td>
                 </tr>
